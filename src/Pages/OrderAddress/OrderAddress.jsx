@@ -54,7 +54,7 @@ const OrderAddress = () => {
             orderItems.push(itemInfo);
           }
         });
-        console.log(orderItems);
+       // console.log(orderItems);
         let orderData= {
           address:values,
           items: orderItems,

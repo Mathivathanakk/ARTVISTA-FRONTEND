@@ -19,11 +19,10 @@ import Cart from "./Pages/Cart/Cart";
 import OrderAddress from "./Pages/OrderAddress/OrderAddress";
 import Myorder from "./Pages/MyOrders/Myorder";
 import Verify from "./Pages/Verify/Verify";
-import AdminVerify from './Components/AdminVerification/AdminVerify';
-import AdminActivating from './Components/AdminVerification/AdminActivating';
+import AdminVerify from "./Components/AdminVerification/AdminVerify";
+import AdminActivating from "./Components/AdminVerification/AdminActivating";
 import Footer from "./Components/Footer/Footer";
-
-
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 const App = () => {
   return (
@@ -36,14 +35,20 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/cartpage" element={<Cart />} />
-          <Route path="/arts" element={<ArtDisplay />} />
-          <Route path="/placeorder" element={<OrderAddress />} />
-          <Route path="/cart/:id" element={<CartPage />} />
-          <Route path='/myorder' element={<Myorder />}/>
-          <Route path='/verify' element={<Verify />}/>
-          <Route path='/admin-artist' element={<AdminVerify />}/>
-          <Route path='/admin-bio/:id/:token' element={<AdminActivating />}/>
+
+          <Route path="/admin-artist" element={<AdminVerify />} />
+          <Route path="/admin-bio/:id/:token" element={<AdminActivating />} />
+
+          {/* registered user routes */}
+          <Route element={<PrivateRoute />}>
+            <Route path="/arts" element={<ArtDisplay />} />
+            <Route path="/placeorder" element={<OrderAddress />} />
+            <Route path="/cartpage" element={<Cart />} />
+            <Route path="/cart/:id" element={<CartPage />} />
+            <Route path="/myorder" element={<Myorder />} />
+            <Route path="/verify" element={<Verify />} />
+          </Route>
+
           {/* admin routes */}
           <Route element={<OnlyAdminPrivateRoute />}>
             <Route path="/admin" element={<AdminPanel />} />
@@ -53,7 +58,7 @@ const App = () => {
             <Route path="/admin/edit/:id" element={<EditItem />} />
           </Route>
         </Routes>
-      <Footer />
+        <Footer />
       </BrowserRouter>
     </div>
   );

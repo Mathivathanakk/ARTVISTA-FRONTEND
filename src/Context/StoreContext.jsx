@@ -31,7 +31,7 @@ const StoreContextProvider = (props) => {
     try {
       const response = await axios.get(`${url}/api/arts/get-art`);
       setArtList(response.data.data);
-      console.log(response.data);
+     // console.log(response.data);
     } catch (error) {
       console.log(error);
     }
