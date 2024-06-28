@@ -16,7 +16,7 @@ import Category_6 from "./Category_6.jpg";
 import Home_1 from "./Home_1.jpg";
 import Home_2 from "./Home_2.jpg";
 import Home_3 from "./Home_3.jpg";
-import Home_4 from "./Home_4.jpg";
+
 import Home_5 from "./Home_5.jpg";
 import Home_6 from "./Home_6.jpg";
 import Home_7 from "./Home_7.jpg";
@@ -27,7 +27,7 @@ export const assets = {
   Home_1,
   Home_2,
   Home_3,
-  Home_4,
+
   Home_5,
   Home_6,
   Home_7,
