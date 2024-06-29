@@ -67,7 +67,7 @@ const AdminActivating = () => {
                 onChange={formik.handleChange}
                 value={formik.values.username}
               />
-              {formik.errors.email ? (
+              {formik.errors.username ? (
                 <div className="text-danger">{formik.errors.username}</div>
               ) : null}
             </div>

@@ -5,7 +5,7 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey:import.meta.env.VITE_FIREBASE_API_KEY,
+  apiKey:"AIzaSyDJpBJrG6m2LdPk1ck_Xw9wQpgFFR7-8U8",
   authDomain: "artvista-gallery.firebaseapp.com",
   projectId: "artvista-gallery",
   storageBucket: "artvista-gallery.appspot.com",
